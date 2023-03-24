@@ -33,14 +33,14 @@
 # Tarea 3 Listas
 # Victor Bernal
 
-mi_lista = []
+mi_lista = [] # nada
 
-lista = [1, ['a', 'e', 'i', 'o', 'u'], 8.9, 'hola']
+lista = [1, ['a', 'e', 'i', 'o', 'u'], 8.9, 'hola'] 
 
-print (lista)
+print (lista) # [1, ['a', 'e', 'i', 'o', 'u'], 8.9, 'hola']
 
 lista.reverse()
-print(lista)
+print(lista)  # ['hola', 8.9, ['a', 'e', 'i', 'o', 'u'], 1]
 
 lista=[10, 20, 30]
 print(len(lista))    # imprime un 3
