@@ -191,7 +191,7 @@ st2.isdisjoint(st1) # False
 
 numeros_pares = {0, 2, 4 ,6, 8}
 numeros_pares = {1, 3, 5, 7, 9}
-numeros_pares.isdisjoint(odd_numeros) # True, porque no hay elemento común
+numeros_pares.isdisjoint(add_numeros) # True, porque no hay elemento común
 
 python = {'p', 'y', 't', 'h', 'o','n'}
 dragon = {'d', 'r', 'a', 'g', 'o','n'}
