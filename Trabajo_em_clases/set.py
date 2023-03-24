@@ -128,7 +128,7 @@ python.intersection(dragon)     # {'o', 'n'}
 #Comprobación de subconjunto y superconjunto
 #Un conjunto puede ser un subconjunto o super conjunto de otro conjunto
 
-Subset: issubset()
+#Subset: issubset()
 #Super set: issuperset
 # sintaxis
 st1 = {'item1', 'item2', 'item3', 'item4'}
