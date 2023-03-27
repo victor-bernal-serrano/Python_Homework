@@ -1,4 +1,4 @@
-number = -2
+number = -7
 
 if number > 0:
     print("Positive number")
@@ -10,7 +10,6 @@ else:
 
 print('This statement is always executed')
 
-# Un ejemplo de este seria
 number = 5
 
 # outer if statement
