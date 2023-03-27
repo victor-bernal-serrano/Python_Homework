@@ -8,7 +8,7 @@
 sets ={1, 1, 2, 1, 1, False, 2}
 sets = [2]
 
-print (sets[2])
+#print (sets[2])
 
 # sintaxis
 st = {'item1', 'item2', 'item3', 'item4'}
