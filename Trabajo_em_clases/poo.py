@@ -1,0 +1,101 @@
+class person:
+    def _init_(self, name, age, x):
+        self.name = name
+        self.age = age
+        self.x = x
+    def myName(self):
+        print("Hi my name is Victor" + self.name)
+    
+    def myAge(self):
+        print("My age is" + self.age)
+    
+    def escribir(self):
+        print("Dame x" + self.age)
+
+
+print("#########################################################")
+
+print("Herencia")
+
+class Animal:
+    def __init__(self, especie, edad):
+        self.especie = especie
+        self.edad = edad
+
+    # Método genérico pero con implementación particular
+    def hablar(self):
+        # Método vacío
+        pass
+
+    # Método genérico pero con implementación particular
+    def moverse(self):
+        # Método vacío
+        pass
+
+    # Método genérico con la misma implementación
+    def describeme(self):
+        print("Soy un Animal del tipo", type(self).__name__)
+
+
+# Perro hereda de Animal
+class Perro(Animal):
+    pass
+
+mi_perro = Perro('mamífero', 10)
+mi_perro.describeme()
+# Soy un Animal del tipo Perro
+
+class Perro(Animal):
+    def hablar(self):
+        print("Guau!")
+    def moverse(self):
+        print("Caminando con 4 patas")
+
+class Vaca(Animal):
+    def hablar(self):
+        print("Muuu!")
+    def moverse(self):
+        print("Caminando con 4 patas")
+
+class Abeja(Animal):
+    def hablar(self):
+        print("Bzzzz!")
+    def moverse(self):
+        print("Volando")
+
+    # Nuevo método
+    def picar(self):
+        print("Picar!")
+
+print("#########################################################")
+
+print("Cohesion")
+
+# Mal. Cohesión débil
+def suma():
+    num1 = float(input("Dame primer número"))
+    num2 = float(input("Dame segundo número"))
+    suma = num1 + num2
+    print(suma)
+
+suma()
+def suma(numeros):
+    total = 0
+    for i in numeros:
+        total = total + i
+    return total
+
+print("#########################################################")
+
+print("Abstraccion")
+
+class Clase:
+    def __init__(self, mi_atributo):
+        self.__mi_atributo = mi_atributo
+
+    @property
+    def mi_atributo(self):
+        return self.__mi_atributo
+    mi_clase = Clase("valor_atributo")
+#mi_clase.mi_atributo
+# 'valor_atributo'
