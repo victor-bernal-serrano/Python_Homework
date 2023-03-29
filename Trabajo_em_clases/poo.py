@@ -96,6 +96,74 @@ class Clase:
     @property
     def mi_atributo(self):
         return self.__mi_atributo
-    mi_clase = Clase("valor_atributo")
+    mi_clase = ("valor_atributo")
 #mi_clase.mi_atributo
 # 'valor_atributo'
+
+print("#########################################################")
+
+print("Poliformismo")
+class Animal:
+    def hablar(self):
+        pass
+class Perro(Animal):
+    def hablar(self):
+        print("Guau!")
+
+class Gato(Animal):
+    def hablar(self):
+        print("Miau!")
+for animal in Perro(), Gato():
+    animal.hablar()
+
+print("#########################################################")
+
+print("Acoplamiento")
+
+class Clase1:
+    x = True
+    pass
+
+class Clase2:
+    def mi_metodo(self, valor):
+        if Clase1.x:
+            self.valor = valor
+
+mi_clase = Clase2()
+mi_clase.mi_metodo("Hola")
+mi_clase.valor
+
+print("#########################################################")
+
+print("Encapsulamiento")
+
+class Clase:
+    atributo_clase = "Hola"
+    def __init__(self, atributo_instancia):
+        self.atributo_instancia = atributo_instancia
+
+mi_clase = Clase("Que tal")
+mi_clase.atributo_clase
+mi_clase.atributo_instancia
+# 'Hola'
+# 'Que tal'
+
+class Clase:
+    atributo_clase = "Hola"   # Accesible desde el exterior
+    __atributo_clase = "Hola" # No accesible
+
+    # No accesible desde el exterior
+    def __mi_metodo(self):
+        print("Haz algo")
+        self.__variable = 0
+
+    # Accesible desde el exterior
+    def metodo_normal(self):
+        # El método si es accesible desde el interior
+        self.__mi_metodo()
+
+mi_clase = Clase()
+#mi_clase.__atributo_clase  # Error! El atributo no es accesible
+#mi_clase.__mi_metodo()     # Error! El método no es accesible
+mi_clase.atributo_clase     # Ok!
+mi_clase.metodo_normal()    # Ok!
